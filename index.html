@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Quiz Maker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Quiz Maker</h1>
+
+      <!-- Start Screen -->
+      <div id="start-screen">
+        <label for="quiz-time">Enter Quiz Time (minutes):</label>
+        <input type="number" id="quiz-time" min="1" placeholder="e.g., 5" />
+        <button id="start-btn">Start Quiz</button>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div id="quiz-screen" class="hidden">
+        <div class="quiz-header">
+          <div id="timer">Time: 00:00</div>
+        </div>
+        <form id="quiz-form"></form>
+        <button id="submit-btn">Submit Quiz</button>
+      </div>
+
+      <!-- Result Screen -->
+      <div id="result-screen" class="hidden">
+        <h2>Your Score</h2>
+        <p id="score-display"></p>
+        <button id="check-answers-btn">Check Answers</button>
+        <button onclick="location.reload()">Restart</button>
+      </div>
+
+      <!-- Answer Review Screen -->
+      <div id="review-screen" class="hidden">
+        <h2>Answer Review</h2>
+        <div id="review-content"></div>
+        <button onclick="location.reload()">Restart Quiz</button>
+      </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
